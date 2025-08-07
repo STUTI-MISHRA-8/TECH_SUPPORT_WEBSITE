@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tech Support</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tech Support Website</h1>
+
+    <div id="login-form">
+        <h2>Login</h2>
+        <input type="email" id="login-email" placeholder="Email">
+        <input type="password" id="login-password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p>Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
+    </div>
+
+    <div id="signup-form" style="display: none;">
+        <h2>Sign Up</h2>
+        <input type="email" id="signup-email" placeholder="Email">
+        <input type="password" id="signup-password" placeholder="Password">
+        <button onclick="signup()">Sign Up</button>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+
+    <div id="app" style="display: none;">
+        <h2>Welcome!</h2>
+        <button onclick="logout()">Logout</button>
+
+        <div id="input-form">
+            <h3>Describe your technical issue:</h3>
+            <textarea id="issue-input" rows="4" cols="50"></textarea>
+            <button onclick="getSolution()">Get Solution</button>
+        </div>
+
+        <div id="solution-area">
+            <h3>Solution:</h3>
+            <p id="solution-text"><em>No solution yet.</em></p>
+        </div>
+
+        <button onclick="markSolved('ai')">Solved</button>
+        <button onclick="forwardToSystems()">Forward to Systems</button>
+
+        <hr>
+
+        <h2>Unsolved Issues</h2>
+        <ul id="unsolved-list"></ul>
+        <button onclick="getUnsolvedIssues()">Refresh Unsolved Issues</button>
+    </div>
+
+    <script src="script.js" type="module" defer></script>
+</body>
+</html>
