@@ -69,9 +69,3 @@ This project simulates a tech support website where users can submit technical p
 3.  Click "Get Solution" to receive an AI-generated solution.
 4.  Mark the issue as solved or forward it to the Systems team.
 
-## `requirements.txt`
-
-Create a file called `requirements.txt` in the root directory of your project and add the following dependencies:
-Flask
-Flask-Cors
-openpyxl
